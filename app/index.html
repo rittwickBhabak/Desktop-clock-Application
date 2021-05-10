@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap.css.map"> -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Clock</title>
+</head>
+
+<body>
+
+
+    <div id="screen">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item m-auto" role="presentation">
+                <button class="nav-link " id="stopwatch-tab" data-bs-toggle="tab" data-bs-target="#stopwatch"
+                    type="button" role="tab" aria-controls="stopwatch" aria-selected="true">Stopwatch</button>
+            </li>
+            <li class="nav-item m-auto" role="presentation">
+                <button class="nav-link active" id="timer-tab" data-bs-toggle="tab" data-bs-target="#timer"
+                    type="button" role="tab" aria-controls="timer" aria-selected="false">Timer</button>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade" id="stopwatch" role="tabpanel" aria-labelledby="stopwatch-tab">
+                <div id="display-area">
+                    00:00:00
+                </div>
+
+                <div id="stopwatch-ctrls">
+
+                    <div id="strat-stopwatch-ctrl">
+                        <button class="btn btn-outline-primary" type="button" id="start-stopwatch">Start</button>
+                    </div>
+                    <div id="run-stopwatch-ctrl">
+                    <button id="stop-stopwatch" class="btn btn-outline-warning">Pause</button>
+                    <button id="resume-stopwatch" class="btn btn-outline-success">Resume</button>
+                    <button id="cancel-stopwatch" class="btn btn-outline-primary">Cancel</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+            <div class="tab-pane fade show active" id="timer" role="tabpanel" aria-labelledby="timer-tab">
+                <div class="timer-display-area">
+                    <div id="timer-input-area">
+                        <div class="timer-input-box">
+                            <small>Hour</small>
+                            <input type="number" id="hour" min="0" max="3" value="0">
+                        </div>
+                        <div class="timer-input-box">
+                            <small>Minute</small>
+                            <input type="number" id="minute" min="0" max="59" value="0">
+                        </div>
+                        <div class="timer-input-box">
+                            <small>Second</small>
+                            <input type="number" id="second" min="0" max="59" value="15">
+                        </div>
+                    </div>
+                    <div id="timer-run-dispay">
+                    </div>
+                </div>
+
+                <div id="timer-ctrls">
+                    <div id="start-timer-ctrl">
+                        <button class="btn btn-outline-primary" id="start-timer">Start</button>
+                        <button class="btn btn-outline-danger" id="reset-timer">Reset Timer</button>
+                    </div>
+                    <div id="run-timer-ctrl">
+                        <button class="btn btn-outline-danger" id="pause-timer">Pause</button>
+                        <button class="btn btn-outline-success" id="resume-timer">Resume</button>
+                        <button class="btn btn-outline-primary" id="cancel-timer">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+        crossorigin="anonymous"></script> -->
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+        <!-- <script src="js/bootstrap.js.map"></script> -->
+    <script src="js/stopwatch.js"></script>
+    <script src="js/timer.js"></script>
+</body>
+
+</html>
