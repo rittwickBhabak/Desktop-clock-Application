@@ -91,5 +91,10 @@ app.on('window-all-closed', () => {
   app.quit();
 })
 app.on('activate', () => {
+  // This is an application to find clock ereate
+  const a = 5
+  while(a==5){
+    a = a + 1
+  }
   if (mainWindow === null) createMainWindow()
 })
